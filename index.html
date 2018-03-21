@@ -7,6 +7,51 @@
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- <link rel="stylesheet" href="./firesc.css"> -->
+  <!-- font -->
+  <style>
+    * {
+      text-shadow: 1px 2px 1.5px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      line-height: 95%;
+      margin: 25px 0;
+      letter-spacing: 2px;
+      word-spacing: 10px;
+    }
+
+    @media screen and (max-width: 500px) {
+      h1 {
+        font-size: 10vw !important;
+      }
+    }
+
+    h2 {
+      margin: 20px 0;
+      letter-spacing: 1.5px;
+      word-spacing: 7.5px;
+    }
+
+    h3 {
+      line-height: 115%;
+      margin: 15px 0;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+    }
+
+    p {
+      line-height: 125%;
+      margin: 10px 0;
+      letter-spacing: 0.5px;
+      word-spacing: 2.5px;
+    }
+
+    a,
+    button {
+      letter-spacing: 0.5px;
+      word-spacing: 2.5px;
+    }
+  </style>
   <!-- Menu -->
   <style>
     body {
@@ -20,6 +65,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+      z-index: 9999;
     }
 
     .topnav a {
@@ -110,6 +157,23 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+
+    .buttonHero {
+      margin: 25px 0;
+      text-transform: uppercase;
+      border-radius: 2px;
+      padding: 20px 30px;
+      box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      transition: all ease-in-out 300ms;
+    }
+
+    .buttonHero:hover {
+      color: white !important;
+      background: #00cff9;
+      box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+      transform: translate(0px, -2.5px) scale(1.05);
     }
   </style>
   <!-- voluntari -->
@@ -212,6 +276,21 @@
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
+    }
+
+    .hero-image::before {
+      content: '';
+      /* background: rgba(0, 0, 0, 0.1); */
+      /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
+      /* background-image: linear-gradient(120deg, rgba(161, 196, 253, 0.5) 0%, rgba(194, 233, 251, 0.5) 100%); */
+      /* background-image: linear-gradient(-225deg, rgba(61, 78, 129, 0.5) 0%, rgba(87, 83, 201, 0.5) 48%, rgba(110, 127, 243, 0.5) 100%); */
+      /* background-size: 4px 4px; */
+      background: rgba(14, 46, 183, 0.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
     }
 
     .hero-text {
@@ -352,7 +431,7 @@
         Oferim timp, energie si cunostinte fara asteptari financiare
         <br> Pentru un viitor mai bun
       </p>
-      <button>Alatura-te</button>
+      <button class="buttonHero">Alatura-te</button>
     </div>
   </div>
   <!-- <h2>Viata de voluntar</h2>
